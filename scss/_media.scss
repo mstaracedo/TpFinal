@@ -1,45 +1,48 @@
-/*media testimonios*/
+
+
+
+
 
 @media  (min-width: 0px) and (max-width: 767px) {
 
-      
+     
 
     .navbar li {
         width: 50%;
 
        }
      
-   
-     footer {
-      background-color: black;
-      height: auto;
-      width: 1200px;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      padding-top: 20px;
-      color: rgb(21, 88, 88);
-      
-      
-      }
-      
-      .footercontainer {
-       display: inline-block;
-       height: 100px;
-       margin-left: 8%;
-      
-      }
 
-      .derechosfooter {
-     
-        display: inline-block;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-left: 8%;
+     .contenedorcaja{
+       display: grid; 
+       grid-template-columns: auto auto auto;
+       margin-left: 130px;
         
-    }
+      
+      }
 
 
+      
+   
+      footer{
+        width: 1100px;
+        
+      }
 
+
+      .footer-content{
+      
+        margin-left: 5%;
+      }
+     
+      .footer-bottom{
+        display: inline-block;
+        margin-left: 10%;
+        
+      }
+
+      
+/*media testimonios*/ 
 
 .contenedortestimonios{
 
@@ -55,4 +58,56 @@
     
   }
   
+
+/*media servicios*/
+
+.contenedorservicios {
+
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax(100px, auto);
+  
+  row-gap: 20px;
+  
+}
+
+.imagenservicios{
+  place-content: center;
+  margin-left: 30%;
+}
+
+.textoservicio {
+  margin-bottom: 20%;
+}
+
+/*media conoceme*/
+
+.contenedordiv{
+
+  margin-top: 5%;
+  margin-bottom: 20%;
+  display:inline-block;
+  margin-right: 20%;
+ 
+  }
+    
+ .textoconoceme{
+   font-size: 30px;
+   text-align: center;
+   display: inline-block;
+   margin-top: 5%;
+  }
+
+    
+ .fotoconoceme{
+   margin-left: 15%;
+  }
+
+    li {
+    
+      width: 20%;
+    }
+
+
 }
