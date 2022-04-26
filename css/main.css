@@ -1,20 +1,27 @@
-/* pagina testimonios*/
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #111;
   max-height: 1000vh;
   min-width: 1000px; }
 
-.header {
-  grid-area: header;
-  background-color: #111;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px; }
-
 h1, .titulos {
   color: white;
   font: Arial, Helvetica, sans-serif; }
+
+h2 {
+  color: white;
+  font-size: 15px;
+  text-align: left; }
+
+.h3 {
+  color: #b63535;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0cm; }
 
 .titulos {
   text-align: center;
@@ -41,7 +48,9 @@ ul {
     background-color: #aaa;
     border: 1px solid #000;
     text-align: center;
-    color: #111; }
+    color: #111;
+    list-style: none;
+    text-decoration: none; }
     ul li:hover {
       background-color: white;
       color: #111; }
@@ -54,30 +63,113 @@ ul {
         text-decoration: none;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
 
-.contenedortestimonios {
+/* header */
+.grid-container {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: minmax(100px, auto);
-  gap: 1em;
-  margin-top: 5%; }
+  grid-template-areas: 'header header header' 
+ 'main main main' 
+ 'left middle right' 
+ 'footer footer footer';
+  grid-column-gap: 40px;
+  grid-row-gap: 20px; }
 
-.contenedortexto {
-  margin-top: 5%;
-  margin-bottom: 5%; }
-
-.textoparrafo {
+.header {
+  grid-area: header;
+  background-color: #111;
+  padding: 30px;
   text-align: center;
-  font: 30px;
-  color: #c1cdda; }
+  font-size: 35px; }
+  
 
-.imagentest {
-  width: 50px;
-  height: 50px;
-  margin-top: 1%; }
+.imglogo {
+  width: 100px;
+  height: 100px; }
 
-.gridtextoparrafo2 {
+.bordesredondeados {
+  border-radius: 50px;
+  width: max-content;
+  height: auto;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px; }
+
+p {
+  line-height: 2;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center; }
+
+.h2index {
+  color: white;
+  font-size: 40px;
+  text-align: center; }
+
+.tituloh3 {
+  color: #b63535;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0cm; }
+
+/* cajas */
+.contenedorcaja {
   display: grid;
-  grid-template-rows: 50px 50px 50px 50px; }
+  padding: 10px;
+  max-height: 300px;
+  margin-bottom: 50px;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 80px;
+  margin-left: 30px; }
+
+.left, .middle, .right {
+  background-color: #aaa;
+  border-style: inset;
+  border-color: black; }
+
+.imagencaja {
+  width: 170px;
+  max-height: 160px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  border-radius: 50px; }
+
+.left:hover, .middle:hover, .right:hover {
+  box-shadow: 8px 8px 10px #17C3B2; }
+
+button {
+  padding: 0.8em 1.8em;
+  border: 2px solid #17C3B2;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #17C3B2; }
+
+button::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #17C3B2;
+  transition: .5s ease;
+  display: block;
+  z-index: -1; }
+
+button:hover::before {
+  width: 100%; }
+
+button:hover {
+  color: black; }
 
 footer {
   background-color: black;
@@ -118,10 +210,95 @@ footer {
   font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   text-decoration: none; }
 
-/*media testimonios*/
+/* pagina conoceme*/
+.contenedordiv {
+  margin-top: 5%;
+  margin-bottom: 30%; }
+
+.fotoconoceme {
+  float: left;
+  width: 500px;
+  height: 430px;
+  padding-right: 5%; }
+
+.textoconoceme {
+  color: #c1cdda;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 200%; }
+
+/* pagina servicios*/
+.contenedorservicios {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: minmax(100px, auto);
+  row-gap: 200px;
+  column-gap: 10px;
+  margin-top: 10%;
+  margin-bottom: 10%; }
+
+.imagenservicios {
+  width: 400px;
+  height: 300px;
+  margin-left: 40px; }
+
+.textoservicio {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 180%;
+  font-size: 20px;
+  color: #c1cdda; }
+
+/* pagina testimonios*/
+.contenedortestimonios {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: minmax(100px, auto);
+  gap: 1em;
+  margin-top: 5%; }
+
+.contenedortexto {
+  margin-top: 5%;
+  margin-bottom: 5%; }
+
+.textoparrafo {
+  text-align: center;
+  font: 30px;
+  color: #c1cdda; }
+
+.imagentest {
+  width: 50px;
+  height: 50px;
+  margin-top: 1%; }
+
+.gridtextoparrafo2 {
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px; }
+
+/* pagina contacto*/
+.titulos {
+  margin-bottom: 5%; }
+
+.formulario-contacto-nombre {
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #8de48d; }
+
+.formulario-contacto {
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #8de48d; }
+
+.enviar {
+  margin-bottom: 20px; }
+
 @media (min-width: 0px) and (max-width: 767px) {
   .navbar li {
     width: 50%; }
+  .contenedorcaja {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 130px; }
   footer {
     background-color: black;
     height: auto;
@@ -139,10 +316,35 @@ footer {
     justify-content: center;
     flex-direction: column;
     margin-left: 8%; }
+  /*media testimonios*/
   .contenedortestimonios {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: minmax(100px, auto); }
   .contenedortexto {
     margin-bottom: 10%;
-    margin-top: 10%; } }
+    margin-top: 10%; }
+  /*media servicios*/
+  .contenedorservicios {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(100px, auto);
+    row-gap: 20px; }
+  .imagenservicios {
+    place-content: center;
+    margin-left: 30%; }
+  .textoservicio {
+    margin-bottom: 20%; }
+  /*media conoceme*/
+  .contenedordiv {
+    margin-top: 5%;
+    margin-bottom: 30%;
+    display: inline-block;
+    margin-right: 20%; }
+  .textoconoceme {
+    font-size: 30px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 5%; }
+  li {
+    width: 30%; } }
