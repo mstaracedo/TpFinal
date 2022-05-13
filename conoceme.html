@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta name="description" content="sitio web de servicios de entrenamientos mediante personal trainer">
     <meta name="keywords"  content="personal trainer, entrenamiento, gimnasio, gym, salud, clases virtuales, rutinas">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -14,28 +17,45 @@
 </head>
 <body>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">volver al inicio</a>
-            </li>
-        </ul>
-    </nav>
-     
+  <header class="header">
+    
+    <div class="logo" >
+      <img src="img/logo4.png" alt="logo">
+    </div>
+
+    <div class="nav-menu">
+
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+      <i class="menu-icon"> <img src="img/menu-icon.png" alt="menu"></i>
+      </label>
+
+     <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="conoceme.html">Conoceme</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="testimonios.html">Testimonios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+     </ul>
+    
+    </div>
+
+  </header> 
+
+  <main>
     
     <h1 class="titulos"> Conoceme </h1>
 
     <div class="contenedordiv">
-
         <img class="fotoconoceme" src="img/fotoconoceme.jpg" alt="FotoConoceme">
         <h2 class="textoconoceme">
-          Mi nombre es Matias Staracedo, licenciado de educación física con 10 años de experiencia en el entrenamiento personal a todo tipo de población, con la capacidad de integrar varias disciplinas de acuerdo a la necesidad de cada persona, aportando desde la experiencia con tips que puedan encaminar a resultados rápidos, sugerencias alimenticias, posturales y de hábitos cotidianos. Recuerda que "tú cuerpo es un gimnasio, solo debes saber usarlo" yo te ayudaré a lograrlo y conseguir tus objetivos.
+         Mi nombre es Matias Staracedo, licenciado de educación física con 10 años de experiencia en el entrenamiento personal a todo tipo de población, con la capacidad de integrar varias disciplinas de acuerdo a la necesidad de cada persona, aportando desde la experiencia con tips que puedan encaminar a resultados rápidos, sugerencias alimenticias, posturales y de hábitos cotidianos. Recuerda que "tú cuerpo es un gimnasio, solo debes saber usarlo" yo te ayudaré a lograrlo y conseguir tus objetivos.
         </h2>
-
-
     </div>
 
-    <footer>
+  </main>
+
+  <footer>
         <div class="footer-content">
           <h3>Matias Staracedo - Personal Trainer</h3>
           <ul class="socials">
@@ -44,13 +64,11 @@
             <li class="li-footer"><a href="https://www.facebook.com/matias.ezequiel"> <i class="fa fa-facebook"></i></a></li>
           </ul>
         </div>
+
         <div class="footer-bottom">
-          <p>Copyright,todos los derechos reservados. designed by <span>Matias Staracedo</span> </p>
+          <p>Copyright,todos los derechos reservados. 
         </div>
-      </footer>
-    
-</body>
-</html>
+  </footer>
     
 </body>
 </html>

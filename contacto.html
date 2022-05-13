@@ -14,57 +14,73 @@
 </head>
 <body>
     
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">volver al inicio</a>
-            </li>
-        </ul>
-    </nav>
+  <header class="header">
+    
+    <div class="logo" >
+      <img src="img/logo4.png" alt="logo">
+    </div>
+
+    <div class="nav-menu">
+
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+      <i class="menu-icon"> <img src="img/menu-icon.png" alt="menu"></i>
+      </label>
+
+     <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="conoceme.html">Conoceme</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="testimonios.html">Testimonios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+     </ul>
+    
+    </div>
+
+  </header>  
+  
+  <main>
       
     <h1 class="titulos">Contacto</h1>
 
-    <section class="formulario-contacto">
-
-        <form action="#" method="post" enctype="application/x-www-form-urlencoded">
-            <div>
-    
-                    <legend>Datos del usuario:</legend>
-                    <br>
-                    <div class="formulario-contacto-nombre">
-                        <label for="nombre">Nombre</label>
-                        <input id="nombre" type="text" name="nombre" placeholder="ingresa un nombre">
-                    </div>
-                    <div class="formulario-contacto-nombre">
-                        <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido" placeholder="ingresa Apellido">
-
-                    </div>
-                    <div>
-                        <label for="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="ingresa tu email">
-                    </div>
-                    
-                  
-            </div>
-            <br>
-
-            <div>
-                <label for="mensaje">Deja tu mensaje:</label>
-                <br>
-                <textarea name="mensaje" id="" cols="30" rows="5"></textarea>
-            </div>
-
-            <div class="enviar">
-                <input type="submit" value="Enviar formulario"/>
+    <div class="formulario-contacto">
+      
+      <div class="formulario">      
+        <h2 class="h2-contacto"> Formulario de contacto</h2>
+        
+            <form action="submeter-formulario.php" method="post">     
+          
+                  <p class="p-contacto">
+                    <label for="nombre" class="colocar_nombre">Nombre
+                    </label>
+                    <input type="text" name="introducir_nombre" placeholder="Escribe tu nombre"> 
+                  </p> 
                 
-            </div>
-        </form>
+                  <p class="p-contacto">
+                    <label for="email" class="colocar_email">Email
+                    </label> 
+                    <input type="email" name="introducir_email" placeholder="Escribe tu Email">
+                  </p> 
+              
+                  <p class="p-contacto">
+                    <label for="telefono" class="colocar_telefono">Teléfono
+                    </label> 
+                    <input type="tel" name="introducir_telefono" placeholder="Escribe tu teléfono">
+                  </p> 
+                
+                  <p class="p-contacto">
+                    <label for="mensaje" class="colocar_mensaje">Mensaje
+                    </label>                
+                    <textarea name="introducir_mensaje" class="texto_mensaje" placeholder="Deja aca tu comentario"></textarea> 
+                  </p>                    
+                
+                  <button type="submit" name="enviar_formulario" ><p>Enviar</p></button>
 
-    </section>
-
-</body>
-</html>
+            </form>  
+      </div>  
+    </div>
+  
+  </main>
 
 <footer>
     <div class="footer-content">
@@ -76,7 +92,7 @@
       </ul>
     </div>
     <div class="footer-bottom">
-      <p>Copyright,todos los derechos reservados. designed by <span>Matias Staracedo</span> </p>
+      <p>Copyright,todos los derechos reservados.
     </div>
   </footer>
 
